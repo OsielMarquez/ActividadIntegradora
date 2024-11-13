@@ -1,3 +1,48 @@
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Espacio entre las imágenes */
+    padding: 20px;
+}
+
+.visitante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 768px; /* Limita el tamaño máximo de los contenedores para que no se extiendan mucho */
+}
+
+.img-visitante {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 768px; /* Asegura que la imagen no sea más ancha que 768px */
+    height: auto; /* Mantiene la proporción original */
+    max-height: 1023px; /* Limita la altura máxima a 1023px */
+    object-fit: cover; /* Recorta la imagen para ajustarse sin deformarse */
+    border-radius: 10px;
+    border: 2px solid pink; /* Bordes personalizados */
+}
+
+.descripcion-visitante {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #5b3030;
+}
+
+/* Media queries para ajustar el diseño en dispositivos móviles */
+@media (max-width: 768px) {
+    .galeria {
+        flex-direction: column; /* Coloca las imágenes una debajo de otra en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .img-visitante {
+        width: 80%; /* Ajusta el tamaño de las imágenes en móviles */
+    }
+}
+
+
 /* Encabezado del sitio */
 h1 {
     display: flex;
@@ -93,34 +138,4 @@ footer a {
     font-size: medium;
     font-style: italic;
     text-decoration: none;
-}
-
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .cabeza {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header {
-        background-color: papayawhip;
-    }
-}
-
-@media (max-width: 480px) {
-    p {
-        font-size: 13px;
-    }
-
-    .comidas, .bebidas, .mercancias {
-        grid-template-columns: 1fr;
-    }
-
-    header {
-        background-color: burlywood;
-    }
 }
