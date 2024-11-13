@@ -1,9 +1,10 @@
-/* Encabezado del sitio */
+
 h1 {
     display: flex;
     justify-content: center;
     color: #5b3030;
 }
+
 
 header {
     padding: 2rem 4rem;
@@ -12,7 +13,6 @@ header {
     background-color: beige;
 }
 
-/* Barra de navegación */
 .cabeza {
     display: flex;
     justify-content: center;
