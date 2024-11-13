@@ -1,0 +1,88 @@
+h1 {
+    font-size: 36px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.categorias, .nosotros, .ayuda {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+}
+
+.comidas, .bebidas, .mercancias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+}
+
+.producto {
+    background-color: beige;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid pink;
+}
+
+.img {
+    width: 50%;
+}
+
+.img2 {
+    width: 30%;
+}
+
+nav {
+    border-bottom: 2px solid pink;
+}
+
+header {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+}
+
+.cabeza {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 128px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 2, 1fr;
+    }
+
+    header {
+        background-color: papayawhip;
+    }
+}
+
+@media (max-width: 480px) {
+    p {
+        font-size: 13px;
+    }
+
+    .comidas, .bebidas, .mercancias {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    header {
+        background-color: burlywood;
+    }
+}
